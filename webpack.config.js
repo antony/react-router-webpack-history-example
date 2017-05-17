@@ -19,11 +19,7 @@ module.exports = {
           presets: ['es2015', 'react']
         },
         exclude: /(node_modules)/,
-       },
-      { 
-        test: /\.html$/, 
-        loader: 'file-loader?name=[name].[ext]'
-      }
+       }
     ]
   },
   plugins: [

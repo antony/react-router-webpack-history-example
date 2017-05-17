@@ -20,4 +20,4 @@ $ npm start # or `webpack-dev-server`
 
 # Credits
 
-This is a significantly updated version (Router v4, React 15, Webpack2) version of [amacniel's original project](https://github.com/amacneil/react-router-webpack-history-example)
+This is a significantly updated version (Router v4, React 15, Webpack2) version of [amacneil's original project](https://github.com/amacneil/react-router-webpack-history-example)
