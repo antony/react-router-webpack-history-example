@@ -1,10 +1,10 @@
-var path = require('path');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   context: path.join(__dirname, 'app'),
   entry: {
-    javascript: './app.js',
-    html: './index.html'
+    file: './app.js'
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -12,11 +12,24 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel' },
-      { test: /\.html$/, loader: 'file?name=[name].[ext]' }
+      { 
+        test: /\.js$/,
+        loader: 'babel-loader', 
+        query: {
+          presets: ['es2015', 'react']
+        },
+        exclude: /(node_modules)/,
+       },
+      { 
+        test: /\.html$/, 
+        loader: 'file-loader?name=[name].[ext]'
+      }
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin()
+  ],
   devServer: {
     historyApiFallback: true
   }
-};
+}
