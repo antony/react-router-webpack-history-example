@@ -17,3 +17,7 @@ react-router to pick up the URL and build the correct application state.
 $ npm install
 $ npm start # or `webpack-dev-server`
 ```
+
+# Credits
+
+This is a significantly updated version (Router v4, React 15, Webpack2) version of [amacniel's original project](https://github.com/amacneil/react-router-webpack-history-example)
